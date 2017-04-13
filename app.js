@@ -15,10 +15,10 @@ var app = express();
 // Register configs for the environments where the app functions
 // , these can be stored in a separate file using a module like config
 var APIKeys = {
-    appId           : '__insert_your_app_id__',
-    clientId        : '__insert_your_app_client_id__',
-    clientSecret    : '__insert_your_app_client_secret__',
-    appSignature    : '__insert_your_app_signature__',
+    appId           : process.env.SFMC_APP_ID,
+    clientId        : process.env.SFMC_APP_CLIENTID,
+    clientSecret    : process.env.SFMC_APP_CLIENTSECRET,
+    appSignature    : process.env.SFMC_APP_SIGNATURE,
     authUrl         : 'https://auth.exacttargetapis.com/v1/requestToken?legacy=1'
 };
 
